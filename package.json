@@ -6,7 +6,9 @@
     "analyze": "SET ANALYZE_BUNDLE=true && yarn msdyn365b start",
     "analyze:prod": "SET ANALYZE_BUNDLE=true && yarn msdyn365b build",
     "build": "yarn msdyn365b build",
+    "build --verbose": "yarn msdyn365b build --verbose",
     "build:prod": "yarn clean && yarn msdyn365b build",
+    "build:prod --verbose": "yarn clean && yarn msdyn365b build --verbose",
     "clean": "yarn rimraf build lib dist .tmp gendef.lock",
     "format": "yarn prettier **/**.{ts,tsx}",
     "format:fix": "yarn prettier **/**.{ts,tsx} --write",
@@ -14,6 +16,7 @@
     "lint:fix": "yarn tslint src/**/*.{ts,tsx} --project tsconfig.json --fix --format stylish",
     "precommit": "lint-staged",
     "start": "yarn msdyn365b start local",
+    "start --verbose": "yarn msdyn365b start local --verbose",
     "start:prod": "SET NODE_ENV=production && node build/server.js"
   },
   "devDependencies": {
